@@ -1,0 +1,96 @@
+<mvc:View controllerName="vcpapp.vcpvariantmanagement.controller.Home"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}" showHeader="false">
+    <Table
+                            id="idVariantTabVM"
+                            items="{path: '/results1'}"
+                            growingScrollToLoad="true"
+                            growingThreshold="1000"
+                            growing="true"
+                            sticky="ColumnHeaders"
+                            mode="MultiSelect"
+                        >
+                            <!-- <infoToolbar>
+                                <OverflowToolbar id="_IDGenOverflowToolbar1VM">
+                                    <ToolbarSpacer id="_IDGenToolbarSpacer2VM" />
+                                    <Button
+                                        id="idRefreshVM"
+                                        icon="sap-icon://refresh"
+                                        press="onRefreshPress"
+                                        type="Emphasized"
+                                    />
+                                </OverflowToolbar>
+                            </infoToolbar> -->
+                            <columns>
+                                <Column id="_IDGenColumn14VM">
+                                    <Text
+                                        id="_IDGenText24VM"
+                                        text="Variant Name"
+                                    />
+                                </Column>
+                                <Column id="_IDGenColumn11VM">
+                                    <Text
+                                        id="_IDGenText21VM"
+                                        text="User Name"
+                                    />
+                                </Column>
+                                <Column id="_IDGenColumn12VM">
+                                    <Text
+                                        id="_IDGenText22"
+                                        text="Application Name"
+                                    />
+                                </Column>
+                                <Column id="_IDGenColumn13VM" visible="false">
+                                    <Text
+                                        id="_IDGenText23VM"
+                                        text="Variant ID"
+                                    />
+                                </Column>
+
+                                <!-- Add more columns as needed -->
+                            </columns>
+                            <items>
+                                <ColumnListItem id="_IDGenColumnListItem1VM">
+                                    <cells>
+                                        <Text
+                                            id="_IDGenText28"
+                                            text="{VARIANTNAME}"
+                                        />
+                                        <Text
+                                            id="_IDGenText25VM"
+                                            text="{USER}"
+                                        />
+                                        <Text
+                                            id="_IDGenText26VM"
+                                            text="{APPLICATION_NAME}"
+                                        />
+                                        <Text
+                                            id="_IDGenText27VM"
+                                            text="{VARIANTID}"
+                                        />
+                                    </cells>
+                                </ColumnListItem>
+                            </items>
+                        </Table>
+                        <footer>
+
+            <OverflowToolbar
+                id="_IDGenOverflowToolbarVM"
+            >
+
+                <ToolbarSpacer id="_IDGenToolbarSpacerVM" />
+
+                <Button
+                    id="idDelete"
+                    text="Delete"
+                    type="Emphasized"
+                    enabled="true"
+                    press="onDeletePress"
+                />
+
+            </OverflowToolbar>
+
+        </footer>
+    </Page>
+</mvc:View>

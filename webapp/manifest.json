@@ -15,6 +15,21 @@
       "version": "1.18.4",
       "toolsId": "482f3f75-d04b-4f50-b44f-dd6e5fcb833a"
     },
+    "crossNavigation": {
+      "inbounds": {
+        "display": {
+          "semanticObject": "VariantManagement",
+          "action": "display",
+          "title": "Variant Management",
+          "subTitle": "Manage product variant configurations",
+          "icon": "sap-icon://action-settings",
+          "signature": {
+            "parameters": {},
+            "additionalParameters": "allowed"
+          }
+        }
+      }
+    },
     "dataSources": {
       "mainService": {
         "uri": "/v2/catalog/",

@@ -3,11 +3,37 @@
   "authenticationMethod": "route",
   "routes": [
     {
-      "source": "^/v2/(.*)$",
-      "target": "/v2/$1",
+      "source": "^/v2/catalog/(.*)$",
+      "target": "/v2/catalog/$1",
       "destination": "ConfigProdAuth",
       "authenticationType": "xsuaa",
-      "csrfProtection": false
+      "csrfProtection": false,
+      "scope": {
+        "GET": [
+          "$XSAPPNAME.Developer",
+          "$XSAPPNAME.admin"
+        ],
+        "PUT": [
+          "$XSAPPNAME.Developer",
+          "$XSAPPNAME.admin"
+        ],
+        "PATCH": [
+          "$XSAPPNAME.Developer",
+          "$XSAPPNAME.admin"
+        ],
+        "POST": [
+          "$XSAPPNAME.Developer",
+          "$XSAPPNAME.admin"
+        ],
+        "DELETE": [
+          "$XSAPPNAME.Developer",
+          "$XSAPPNAME.admin"
+        ],
+        "default": [
+          "$XSAPPNAME.Developer",
+          "$XSAPPNAME.admin"
+        ]
+      }
     },
     {
       "source": "^/resources/(.*)$",

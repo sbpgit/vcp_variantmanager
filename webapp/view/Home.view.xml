@@ -11,17 +11,12 @@
                             sticky="ColumnHeaders"
                             mode="MultiSelect"
                         >
-                            <!-- <infoToolbar>
-                                <OverflowToolbar id="_IDGenOverflowToolbar1VM">
-                                    <ToolbarSpacer id="_IDGenToolbarSpacer2VM" />
-                                    <Button
-                                        id="idRefreshVM"
-                                        icon="sap-icon://refresh"
-                                        press="onRefreshPress"
-                                        type="Emphasized"
-                                    />
-                                </OverflowToolbar>
-                            </infoToolbar> -->
+                            <headerToolbar>
+																	<OverflowToolbar id="_IDGenOverflowToolbar1" >
+																		<ToolbarSpacer id="_IDGenToolbarSpacer"/>
+																		<SearchField id="idAppSearch" liveChange="handleSearch" placeholder="AppName/User" width="600px"/>
+																	</OverflowToolbar>
+																</headerToolbar>
                             <columns>
                                 <Column id="_IDGenColumn14VM">
                                     <Text

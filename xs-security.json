@@ -2,6 +2,44 @@
   "xsappname": "vcpappvcpvariantmanagement",
   "tenant-mode": "dedicated",
   "description": "Security profile of called application",
-  "scopes": [],
-  "role-templates": []
+  "scopes": [
+    {
+      "name": "uaa.user",
+      "description": "UAA"
+    },
+    {
+      "name": "$XSAPPNAME.User",
+      "description": "UAA Display"
+    },
+    {
+      "name": "$XSAPPNAME.read",
+      "description": "Read authorization information"
+    },
+    {
+      "name": "$XSAPPNAME.Developer",
+      "description": "Read authorization information"
+    },
+    {
+      "name": "$XSAPPNAME.admin",
+      "description": "Read authorization information"
+    }
+  ],
+ "role-templates": [    
+    {
+      "name": "VCPSupportAdminRole",
+      "description": "UAA VCPSupportAdminRole",
+      "scope-references": [
+        "$XSAPPNAME.admin"
+      ]
+    }
+  ],
+  "oauth2-configuration": {
+    "token-validity": 3600,
+    "redirect-uris": [
+      "https://*.hana.ondemand.com/**",
+      "https://*.applicationstudio.cloud.sap/**"
+    ]
+  },
+  "attributes": [],
+  "authorities-inheritance": false
 }

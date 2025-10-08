@@ -14,6 +14,7 @@ sap.ui.define([
         },
         onAfterRendering: function () {
             sap.ui.core.BusyIndicator.show();
+            
             this.getOwnerComponent().getModel("oModel").read("/getVariantHeader", {
                 filters: [new sap.ui.model.Filter("SCOPE", sap.ui.model.FilterOperator.EQ, "Public")],
                 success: (oData) => {
